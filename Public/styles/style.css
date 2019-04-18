@@ -6,3 +6,9 @@
   line-height: 60px;
   background-color: #f5f5f5;
 }
+
+.ui.inverted.black.segment {
+    background-color: #000000 !important;
+    color: #fff !important;
+    border-bottom: 1px solid rgba(32, 33, 47, 0.7)
+}

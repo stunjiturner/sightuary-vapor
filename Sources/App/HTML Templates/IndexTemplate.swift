@@ -30,7 +30,7 @@ struct IndexTemplate: ContextualTemplate {
                     comment(" //.hero-text ")),
                 
                 comment("start: Priority Kids container segment "),
-                div.class("ui inverted basic segment").child(
+                div.class("ui inverted basic black segment").child(
                     comment(" END segment: Ethics "),
                     div.class("ui equal width center aligned grid").child(
                         div.class("ui middle aligned column container").child(
@@ -44,7 +44,7 @@ struct IndexTemplate: ContextualTemplate {
                     comment(" // PriorityKids ")),
                 
                 comment("start: Social segment "),
-                div.class("ui inverted basic segment").child(
+                div.class("ui inverted basic black segment").child(
                     div.class("ui equal width center aligned grid").child(
                         div.class("ui middle aligned sixteen wide column").child(
                             h1.class("ui inverted header").child("Social"),
