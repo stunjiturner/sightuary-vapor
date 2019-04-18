@@ -12,3 +12,9 @@
     color: #fff !important;
     border-bottom: 1px solid rgba(32, 33, 47, 0.7)
 }
+
+.ui.segment {
+    margin: 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
