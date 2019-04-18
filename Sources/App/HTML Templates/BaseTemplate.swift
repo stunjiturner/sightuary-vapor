@@ -42,7 +42,7 @@ struct BaseTemplate: ContextualTemplate {
                 head.child(
                     meta.charset("utf-8"),
                     meta.name("viewport").content("width=device-width, initial-scale=1, shrink-to-fit=no"),
-                    link.rel("stylesheet").href("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css").integrity("sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO").crossorigin("anonymous").type("text/css"),
+                    link.rel("stylesheet").href("https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.4/dist/semantic.min.css").integrity("sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO").crossorigin("anonymous").type("text/css"),
 
                     runtimeIf(
                         \.title == "Create An Acronym" || \.title == "Edit Acronym",
@@ -54,10 +54,13 @@ struct BaseTemplate: ContextualTemplate {
                     title.child(
                         variable(\.title), " | Acronyms"
                     ),
-                    body.child(
-                        nav.class("navbar navbar-expand-md navbar-dark bg-dark").child(
-                            a.class("navbar-brand").href("/").child(
-                                "TIL"
+                    body.id("home").class("index").child(
+                        nav.class("ui inverted segment").child(
+                            div.class("ui inverted horizontal linked list").child(
+                                a.class("item").href("/").child(
+                                    i.class("bars large link icon")),
+                                a.class("logo ui image").href("/").child(
+                                    img.class("ui medium image").src("https://sightuary-see-v4.s3.amazonaws.com/sites/56a5813dca5ffc000b000000/theme/images/logo20050.png?1530840765").alt(""))
                             ),
                             button.class("navbar-toggler").type("button").dataToggle("collapse").dataTarget("#navbarSupportedContent").ariaControls("navbarSupportedContent").child(
                                 span.class("navbar-toggler-icon")
