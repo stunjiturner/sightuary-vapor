@@ -55,7 +55,7 @@ struct BaseTemplate: ContextualTemplate {
                         variable(\.title), " | Acronyms"
                     ),
                     body.id("home").class("index").child(
-                        nav.class("ui inverted basic segment").child(
+                        nav.class("ui inverted black basic segment").child(
                             div.class("ui inverted horizontal linked list").child(
                                 a.class("item").href("/").child(
                                     i.class("bars large link icon")),
