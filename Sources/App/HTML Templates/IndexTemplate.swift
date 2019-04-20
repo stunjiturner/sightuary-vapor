@@ -19,7 +19,7 @@ struct IndexTemplate: ContextualTemplate {
             BaseTemplate(
                 content:
 
-                div.class("ui inverted basic segment").child(
+                div.class("ui inverted black basic segment").child(
                     div.class("ui equal width center aligned grid").child(
                         div.class("ui middle aligned column container").child(
                             h1.class("ui inverted huge header").child("Everymedia"),
@@ -30,7 +30,7 @@ struct IndexTemplate: ContextualTemplate {
                     comment(" //.hero-text ")),
                 
                 comment("start: Priority Kids container segment "),
-                div.class("ui inverted basic black segment").child(
+                div.class("ui inverted black basic segment").child(
                     comment(" END segment: Ethics "),
                     div.class("ui equal width center aligned grid").child(
                         div.class("ui middle aligned column container").child(
@@ -48,7 +48,7 @@ struct IndexTemplate: ContextualTemplate {
                     div.class("ui equal width center aligned grid").child(
                         div.class("ui middle aligned sixteen wide column").child(
                             h1.class("ui inverted header").child("Social"),
-                            div.class("ui grid container").child(
+                            div.class("ui stackable grid container").child(
                                 div.class("ui inverted horizontal link list").child(
                                     a.href("https://www.instagram.com/sightuary/").class("item").child(
                                         i.class("massive instagram icon"),"| Instagram"),
