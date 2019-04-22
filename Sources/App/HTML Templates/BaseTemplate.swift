@@ -60,13 +60,8 @@ struct BaseTemplate: ContextualTemplate {
                                 a.class("item").href("/").child(
                                     i.class("bars large link icon")),
                                 a.class("logo ui image").href("/").child(
-                                    img.class("ui medium image").src("https://sightuary-see-v4.s3.amazonaws.com/sites/56a5813dca5ffc000b000000/theme/images/logo20050.png?1530840765").alt(""))
-                            ),
-                           
-                            div.class("collapse navbar-collapse").id("navbarSupportedContent").child(
-                                ul.class("navbar-nav mr-auto").child(
-
-
+                                    img.class("ui medium image").src("https://sightuary-see-v4.s3.amazonaws.com/sites/56a5813dca5ffc000b000000/theme/images/logo20050.png?1530840765").alt("")),
+                                a.class("item").href("/register").child(
                                     runtimeIf(
                                         \.userLoggedIn == false,
                                         li.class("nav-item")
@@ -75,7 +70,12 @@ struct BaseTemplate: ContextualTemplate {
                                                     "Register"
                                                 )
                                         )
-                                    )
+                                    ))
+                            ),
+                           
+                            div.class("collapse navbar-collapse").id("navbarSupportedContent").child(
+                                ul.class("navbar-nav mr-auto").child(
+
                                 ),
                                 runtimeIf(
                                     \.userLoggedIn,
@@ -86,7 +86,7 @@ struct BaseTemplate: ContextualTemplate {
                                 )
                             )
                         ),
-                        div.class("container mt-3").child(
+                        div.class("ui grid").child(
                             content
                         ),
 
