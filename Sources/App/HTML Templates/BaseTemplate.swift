@@ -63,7 +63,53 @@ struct BaseTemplate: ContextualTemplate {
                                     img.class("ui medium image").src("https://sightuary-see-v4.s3.amazonaws.com/sites/56a5813dca5ffc000b000000/theme/images/logo20050.png?1530840765").alt(""))
                             ),
                            
-                        div.class("ui grid").child(
+                            div.class("collapse navbar-collapse").id("navbarSupportedContent").child(
+                                ul.class("navbar-nav mr-auto").child(
+
+                                    li.class("nav-item")
+                                        .if(\.title == "Home page", add: .class("active")).child(
+                                            a.href("/").class("nav-link").child(
+                                                "Home"
+                                            )
+                                    ),
+                                    li.class("nav-item")
+                                        .if(\.title == "All Users", add: .class("active")).child(
+                                            a.href("/users").class("nav-link").child(
+                                                "All Users"
+                                            )
+                                    ),
+                                    li.class("nav-item")
+                                        .if(\.title == "All Categories", add: .class("active")).child(
+                                            a.href("/categories").class("nav-link").child(
+                                                "All Categories"
+                                            )
+                                    ),
+                                    li.class("nav-item")
+                                        .if(\.title == "Create An Acronym", add: .class("active")).child(
+                                            a.href("/acronyms/create").class("nav-link").child(
+                                                "Create An Acronym"
+                                            )
+                                    ),
+                                    runtimeIf(
+                                        \.userLoggedIn == false,
+                                        li.class("nav-item")
+                                            .if(\.title == "Register", add: .class("active")).child(
+                                                a.href("/register").class("nav-link").child(
+                                                    "Register"
+                                                )
+                                        )
+                                    )
+                                ),
+                                runtimeIf(
+                                    \.userLoggedIn,
+
+                                    form.class("form-inline").action("/logout").method(.post).child(
+                                        input.class("nav-link btn").type("submit").value("Log out")
+                                    )
+                                )
+                            )
+                        ),
+                        div.class("container mt-3").child(
                             content
                         ),
 
