@@ -63,7 +63,6 @@ struct BaseTemplate: ContextualTemplate {
                                     img.class("ui medium image").src("https://sightuary-see-v4.s3.amazonaws.com/sites/56a5813dca5ffc000b000000/theme/images/logo20050.png?1530840765").alt(""))
                             ),
                            
-                        ),
                         div.class("ui grid").child(
                             content
                         ),
