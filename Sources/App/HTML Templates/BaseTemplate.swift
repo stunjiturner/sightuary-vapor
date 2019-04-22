@@ -61,16 +61,14 @@ struct BaseTemplate: ContextualTemplate {
                                     i.class("bars large link icon")),
                                 a.class("logo ui image").href("/").child(
                                     img.class("ui medium image").src("https://sightuary-see-v4.s3.amazonaws.com/sites/56a5813dca5ffc000b000000/theme/images/logo20050.png?1530840765").alt("")),
-                                a.class("item").href("/register").child(
-                                    runtimeIf(
-                                        \.userLoggedIn == false,
-                                        li.class("nav-item")
-                                            .if(\.title == "Register", add: .class("active")).child(
-                                                a.href("/register").class("nav-link").child(
+                                runtimeIf(
+                                    \.userLoggedIn == false,
+                                        .if(\.title == "Register", add: .class("active")).child(
+                                                a.href("/register").class("item").child(
                                                     "Register"
                                                 )
                                         )
-                                    ))
+                                    )
                             ),
                            
                             div.class("collapse navbar-collapse").id("navbarSupportedContent").child(
