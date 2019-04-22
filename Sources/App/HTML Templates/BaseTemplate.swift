@@ -81,7 +81,7 @@ struct BaseTemplate: ContextualTemplate {
                                     )
                                 ),
                         ),
-                        div.class("container mt-3").child(
+                        div.class("ui grid").child(
                             content
                         ),
 
