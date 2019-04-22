@@ -62,28 +62,10 @@ struct BaseTemplate: ContextualTemplate {
                                 a.class("logo ui image").href("/").child(
                                     img.class("ui medium image").src("https://sightuary-see-v4.s3.amazonaws.com/sites/56a5813dca5ffc000b000000/theme/images/logo20050.png?1530840765").alt(""))
                             ),
-                            runtimeIf(
-                                        \.userLoggedIn == false,
-                                        li.class("nav-item")
-                                            .if(\.title == "Register", add: .class("active")).child(
-                                                a.href("/register").class("nav-link").child(
-                                                    "Register"
-                                                )
-                                        )
-                                    )
-
-                                ),
-                                runtimeIf(
-                                    \.userLoggedIn,
-
-                                    form.class("form-inline").action("/logout").method(.post).child(
-                                        input.class("nav-link btn").type("submit").value("Log out")
-                                    )
-                                ),
                         ),
                         div.class("ui grid").child(
                             content
-                        ),
+                        )),
 
                         runtimeIf(
                             \.showCookieMessage,
