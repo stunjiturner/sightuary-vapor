@@ -19,18 +19,18 @@ struct IndexTemplate: ContextualTemplate {
             BaseTemplate(
                 content:
 
-                div.class("ui inverted black basic segment").child(
+                div.class("ui inverted black basic very padded segment").child(
                     div.class("ui equal width center aligned grid").child(
                         div.class("ui middle aligned column container").child(
-                            h1.class("ui inverted massive header").child("Everymedia"),
-                            h2.class("ui inverted header").child("Purification and Cultivation"),
-                            div.class("ui sub header").child(
-                                h2.class("ui inverted header").child("A digital territory staked and claimed, built on ethics, trust, honor and nobility, as practiced any where in the world"))),
+                            h1.class("ui inverted giant header").child("Everymedia"),
+                            h1.class("ui inverted massive center aligned header").child("Purification and Cultivation",
+                                div.class("sub header").child(
+                                    "A digital territory staked and claimed, built on ethics, trust, honor, emotional intelligence and nobility, as practiced any where in the world"))),
                         comment(" //.page-scroll ")),
                     comment(" //.hero-text ")),
                 
                 comment("start: Priority Kids container segment "),
-                div.class("ui inverted black basic segment").child(
+                div.class("ui inverted black basic very padded segment").child(
                     comment(" END segment: Ethics "),
                     div.class("ui equal width center aligned grid").child(
                         div.class("ui middle aligned column container").child(
@@ -44,7 +44,7 @@ struct IndexTemplate: ContextualTemplate {
                     comment(" // PriorityKids ")),
                 
                 comment("start: Social segment "),
-                div.class("ui inverted basic black segment").child(
+                div.class("ui inverted basic black very padded segment").child(
                     div.class("ui equal width center aligned grid").child(
                         div.class("ui middle aligned sixteen wide column").child(
                             h1.class("ui inverted header").child("Social"),

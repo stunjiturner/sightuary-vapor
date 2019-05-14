@@ -49,42 +49,43 @@ struct BaseTemplate: ContextualTemplate {
 
                         link.rel("stylesheet").href("https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css").integrity("sha384-RdQbeSCGSeSdSlTMGnUr2oDJZzOuGjJAkQy1MbKMu8fZT5G0qlBajY0n0sY/hKMK").crossorigin("anonymous").type("text/css")
                     ),
-
                     link.rel("stylesheet").href("/styles/style.css").type("text/css"),
                     title.child(
                         variable(\.title), " | Acronyms"
                     ),
                     body.id("home").class("index").child(
                         nav.class("ui inverted black basic segment").child(
-                            div.class("ui inverted horizontal linked list").child(
+                            div.class("ui inverted text menu").child(
                                 a.class("item").href("/").child(
                                     i.class("bars large link icon")),
-                                a.class("logo ui image").href("/").child(
+                                a.class("item logo ui image").href("/").child(
                                     img.class("ui medium image").src("https://sightuary-see-v4.s3.amazonaws.com/sites/56a5813dca5ffc000b000000/theme/images/logo20050.png?1530840765").alt("")),
-                                runtimeIf(
-                                    \.userLoggedIn == false,
-                                        .if(\.title == "Register", add: .class("active")).child(
-                                                a.href("/register").class("item").child(
-                                                    "Register"
-                                                )
+                                div.class("right menu").child(
+                                    div.class("ui search item").child(
+                                        // Search input
+                                        div.class("ui big icon input").child(
+                                            input.type("text").name("search").class("prompt").id("search").placeholder("search..."),
+                                            i.class("large inverted search icon")
+                                            )
+                                    ),
+                                    a.class("ui item").href("/register").child(
+                                    runtimeIf(
+                                        \.userLoggedIn == false,
+                                        div.class("signup")
+                                            .if(\.title == "Register", add: .class("active")).child(
+                                                "Sign Up"
+                                        
                                         )
                                     )
-                            ),
-                           
-                            div.class("collapse navbar-collapse").id("navbarSupportedContent").child(
-                                ul.class("navbar-nav mr-auto").child(
-
-                                ),
-                                runtimeIf(
-                                    \.userLoggedIn,
-
-                                    form.class("form-inline").action("/logout").method(.post).child(
-                                        input.class("nav-link btn").type("submit").value("Log out")
+                                
                                     )
                                 )
-                            )
-                        ),
-                        div.class("ui grid").child(
+                              )
+                            ),
+                           
+                        
+                                
+                        div.class("container").child(
                             content
                         ),
 
